@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">APLIKASI POLITEKNIK</string>
+    <string-array name="prodi">
+        <item>Teknik Informatika</item>
+        <item>Teknik Elektronika</item>
+        <item>Teknik Listrik</item>
+        <item>Teknik Mesin</item>
+        <item>Teknik Pengendalian Pencemaran Lingkungan</item>
+        <item>Pengembangan Produk Agroindustri</item>
+    </string-array>
+
+</resources>
