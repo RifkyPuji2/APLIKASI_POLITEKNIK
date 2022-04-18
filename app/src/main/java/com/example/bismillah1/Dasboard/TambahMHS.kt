@@ -11,8 +11,8 @@ class TambahMHS : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tambah_mhs)
 
-        val prodi = resources.getStringArray(R.array.prodi)
-        val arrayAdapter = ArrayAdapter(this, R.layout.dropdown_mhs, prodi)
+        val prodiMHS = resources.getStringArray(R.array.prodi_mhs)
+        val arrayAdapter = ArrayAdapter(this, R.layout.dropdown_mhs, prodiMHS)
         val autoCompleteTV = ACTVMhs
         autoCompleteTV.setAdapter(arrayAdapter)
     }

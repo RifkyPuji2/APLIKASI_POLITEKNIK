@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bismillah1">
-        <activity android:name=".Dasboard.TambahMHS"></activity>
+        <activity android:name=".Dasboard.TambahPGW"></activity>
+        <activity android:name=".Dasboard.DasboardPGW" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Dasboard.TambahMHS" />
         <activity android:name=".Login.LoginAdmin" />
         <activity android:name=".Dasboard.DasboardMHS" />
         <activity android:name=".Login.LoginPgw" />

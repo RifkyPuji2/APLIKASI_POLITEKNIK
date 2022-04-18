@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">APLIKASI POLITEKNIK</string>
-    <string-array name="prodi">
+    <string name="app_name">Bismillah1</string>
+    <string-array name="prodi_mhs">
         <item>Teknik Informatika</item>
         <item>Teknik Elektronika</item>
         <item>Teknik Listrik</item>
@@ -9,4 +9,10 @@
         <item>Pengembangan Produk Agroindustri</item>
     </string-array>
 
+    <string-array name="prodi_pgw">
+        <item>Pribadi</item>
+        <item>Jurusan</item>
+        <item>Unit</item>
+        <item>Lainnya</item>
+    </string-array>
 </resources>

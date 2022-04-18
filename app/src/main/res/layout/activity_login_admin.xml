@@ -133,6 +133,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_password_admin" />
 
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_bg"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/Yellow_200"
+            app:layout_constraintEnd_toEndOf="@+id/btn_login_admin"
+            app:layout_constraintStart_toStartOf="@+id/btn_login_admin"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login_admin" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView

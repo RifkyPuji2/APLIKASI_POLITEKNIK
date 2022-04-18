@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.bismillah1.Dasboard.DasboardMHS;
 import com.example.bismillah1.R;
+import com.example.bismillah1.RegisterActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -26,6 +27,7 @@ public class LoginMhs extends AppCompatActivity {
     EditText EMAILMHS, PASSWORDMHS;
     String EmailMhs, PasswordMhs;
     Button BTNLoginMHS;
+    Button BTNRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class LoginMhs extends AppCompatActivity {
        EMAILMHS = findViewById(R.id.et_email_mhs);
        PASSWORDMHS = findViewById(R.id.et_password_mhs);
        BTNLoginMHS = findViewById(R.id.btn_login_mhs);
+       BTNRegister = findViewById(R.id.btn_register);
 
        BTNLoginMHS.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -43,6 +46,13 @@ public class LoginMhs extends AppCompatActivity {
                cekLoginMhs();
            }
        });
+
+        BTNRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginMhs.this, RegisterActivity.class));
+            }
+        });
 
        MHSBack = (ImageView)findViewById(R.id.mhs_back);
        MHSBack.setOnClickListener(new View.OnClickListener() {
@@ -63,11 +73,11 @@ public class LoginMhs extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Toast.makeText(LoginMhs.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginMhs.this, "Login Berhasil", Toast.LENGTH_LONG).show();
                             startActivity(new Intent(LoginMhs.this, DasboardMHS.class));
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(LoginMhs.this, "KTM atau Password Salah", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginMhs.this, "KTM atau Password Salah", Toast.LENGTH_LONG).show();
                         }
                     }
                 });

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.bismillah1.R;
+import com.example.bismillah1.RegisterActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -25,6 +26,7 @@ public class LoginPgw extends AppCompatActivity {
     EditText EMAILPGW, PASSWORDPGW;
     String EmailPgw, PasswordPgw;
     Button BTNLoginPGW;
+    Button BTNRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +37,16 @@ public class LoginPgw extends AppCompatActivity {
         EMAILPGW = findViewById(R.id.et_email_pgw);
         PASSWORDPGW = findViewById(R.id.et_password_pgw);
         BTNLoginPGW = findViewById(R.id.btn_login_pgw);
-
+        BTNRegister = findViewById(R.id.btn_register);
         PGWBack = (ImageView)findViewById(R.id.pgw_back);
+
+        BTNRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginPgw.this, RegisterActivity.class));
+            }
+        });
+
         BTNLoginPGW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,10 +72,10 @@ public class LoginPgw extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Toast.makeText(LoginPgw.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginPgw.this, "Login Berhasil", Toast.LENGTH_LONG).show();
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(LoginPgw.this, "NIP atau Password Salah", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginPgw.this, "NIP atau Password Salah", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
